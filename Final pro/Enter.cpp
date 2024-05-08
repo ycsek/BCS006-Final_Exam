@@ -48,8 +48,8 @@ void enter()
         }
         else
         {
-            cout << "Wrong! please input it again.\n";
+            cout << "Wrong! please input it again." << endl;
             continue;
         }
     }
-}
+}   
