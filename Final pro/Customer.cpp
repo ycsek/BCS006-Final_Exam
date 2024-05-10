@@ -3,7 +3,7 @@
  * @Date: 27-04-2024 20:26:39
  * @LastEditors: Jason
  * @Contact LastEditors: yuchenshi327@outlook.com
- * @LastEditTime: 04-05-2024 19:00:53
+ * @LastEditTime: 09-05-2024 00:02:59
  */
 
 #include "Customer.h"
@@ -36,10 +36,6 @@ Customer::Customer()
 	// 输入入住天数
 	cout << "Please enter the days you want to stay" << endl;
 	cin >> days;
-
-	// 输入预付款
-	cout << "Please enter the prepaid" << endl;
-	cin >> prepaid;
 }
 
 // 析构函数
@@ -72,9 +68,10 @@ void Customer::set_room_number(int n)
 	room_number = n;
 }
 
-// 预付款
-void Customer ::set_prepaid(int p)
+// 预付款，计算预付款等于预定的天数乘以不同房间等级所对应的房间价格
+void Customer::set_prepaid(int p)
 {
+
 	prepaid = p;
 }
 
@@ -102,7 +99,7 @@ int Customer::get_days()
 	return days;
 }
 
-// 获取预付款
+// 获取预付款,由set_prepaid函数计算得到
 int Customer::get_prepaid()
 {
 	return prepaid;

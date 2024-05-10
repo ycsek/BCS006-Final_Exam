@@ -38,6 +38,7 @@ void book_room()
 	{
 		int n;
 		// 单人房
+
 	case 1:
 		for (n = 0; n < 30; n++)
 		{
@@ -46,16 +47,15 @@ void book_room()
 				cout << "Booked successfully, Your room numbr is: " << room[n].number << endl;
 				room[n].state = 1;
 				customer[i]->set_room_number(room[n].number);
-
-				// 输出入住天数、预付款和价格(入住天数*房间单价)
 				cout << "Days: " << customer[i]->get_days() << endl;
-				cout << "Price : " << room[n].price * customer[i]->get_days() << "mop" << endl;
-				cout << "Prepaid:" << customer[i]->get_prepaid() << "mop" << endl;
+				cout << "Prepaid : " << room[n].price * customer[i]->get_days() << "mop" << endl;
+				customer[i]->set_prepaid(room[n].price * customer[i]->get_days()); 
 				break;
 			}
 		}
 		break;
 		// 双人房
+
 	case 2:
 		for (n = 30; n < 60; n++)
 		{
@@ -65,12 +65,13 @@ void book_room()
 				room[n].state = 1;
 				customer[i]->set_room_number(room[n].number);
 				cout << "Days: " << customer[i]->get_days() << endl;
-				cout << "Prepaid:" << customer[i]->get_prepaid() << "mop" << endl;
-				cout << "Price: " << room[n].price * customer[i]->get_days() << "mop" << endl;
+				cout << "Prepaid: " << room[n].price * customer[i]->get_days() << "mop" << endl;
+				customer[i]->set_prepaid(room[n].price * customer[i]->get_days());
 				break;
 			}
 		}
 		break;
+
 		// 商务房
 	case 3:
 		for (n = 60; n < 90; n++)
@@ -81,12 +82,13 @@ void book_room()
 				room[n].state = 1;
 				customer[i]->set_room_number(room[n].number);
 				cout << "Days: " << customer[i]->get_days() << endl;
-				cout << "Prepaid:" << customer[i]->get_prepaid() << "mop" << endl;
-				cout << "Price: " << room[n].price * customer[i]->get_days() << "mop" << endl;
+				cout << "Prepaid: " << room[n].price * customer[i]->get_days() << "mop" << endl;
+				customer[i]->set_prepaid(room[n].price * customer[i]->get_days());
 				break;
 			}
 		}
 		break;
+
 		// 总统套房
 	case 4:
 		for (n = 90; n < 100; n++)
@@ -97,8 +99,8 @@ void book_room()
 				room[n].state = 1;
 				customer[i]->set_room_number(room[n].number);
 				cout << "Days: " << customer[i]->get_days() << endl;
-				cout << "Prepaid:" << customer[i]->get_prepaid() << "mop" << endl;
-				cout << "Price: " << room[n].price * customer[i]->get_days() << "mop" << endl;
+				cout << "Prepaid: " << room[n].price * customer[i]->get_days() << "mop" << endl;
+				customer[i]->set_prepaid(room[n].price * customer[i]->get_days());
 				break;
 			}
 		}

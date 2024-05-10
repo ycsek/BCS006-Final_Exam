@@ -3,7 +3,7 @@
  * @Date: 27-04-2024 20:23:37
  * @LastEditors: Jason
  * @Contact LastEditors: yuchenshi327@outlook.com
- * @LastEditTime: 04-05-2024 19:06:32
+ * @LastEditTime: 08-05-2024 23:46:52
  */
 
 /*
@@ -37,6 +37,7 @@ void inquire()
 		char name2[10], id2[17];
 		int room_number;
 		int days;
+		int prepaid;
 		cout << "Please enter your name and ID: " << endl;
 		cin >> name2 >> id2;
 		// 遍历已有的顾客信息，查找匹配对象
@@ -46,12 +47,13 @@ void inquire()
 			{
 				room_number = customer[j]->get_room_number();
 				days = customer[j]->get_days();
-								
+				prepaid = customer[j]->get_prepaid();
 				cout << "Name: " << customer[j]->get_name() << endl;
 				cout << "ID: " << customer[j]->get_ID() << endl;
 				cout << "Room number: " << customer[j]->get_room_number() << endl;
 				cout << "Booked Days: " << customer[j]->get_days() << endl;
-				cout << "Prepaid: " << customer[j]->get_prepaid() << "mop" << endl;
+				//输出顾客的预付金额，预付金额为预定的房间天数乘以按照不同房间等级所对应的价格进行计算
+				cout << "Prepaid: " << customer[j]->get_prepaid() << endl;
 			}
 			else
 			{

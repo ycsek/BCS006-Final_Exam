@@ -3,7 +3,7 @@
  * @Date: 27-04-2024 20:24:09
  * @LastEditors: Jason
  * @Contact LastEditors: yuchenshi327@outlook.com
- * @LastEditTime: 04-05-2024 18:53:37
+ * @LastEditTime: 08-05-2024 23:48:19
  */
 
 /*
@@ -35,6 +35,7 @@ void check_in()
         char name2[10], id2[17];
         int room_number;
         int days;
+        int prepaid;
         // 输入姓名和ID
         cout << "Please enter your name and ID: " << endl;
         cin >> name2 >> id2;
@@ -45,11 +46,12 @@ void check_in()
             {
                 room_number = customer[j]->get_room_number();
                 days = customer[j]->get_days();
+				prepaid = customer[j]->get_prepaid();
                 cout << "Name: " << customer[j]->get_name() << endl;
                 cout << "ID: " << customer[j]->get_ID() << endl;
                 cout << "Room number: " << room_number << endl;
                 cout << "Days: " << days << endl;
-                cout << "Prepaid: " << customer[j]->get_prepaid() << "mop" << endl;
+                cout << "Prepaid: " << prepaid << endl;
                 // 根据房间号判断对应的房间等级，遍历房间信息找到房间等级
                 int rank = 0;
                 for (int k = 0; k < 100; k++)
@@ -121,7 +123,7 @@ void check_in()
                     room[n].state = 2;
                     customer[i]->set_room_number(room[n].number);
                     cout << "Days: " << customer[i]->get_days() << endl;
-                    cout << "Price: " << room[n].price * customer[i]->get_days() << "mop" << endl;
+                    cout << "Prepaid: " << room[n].price * customer[i]->get_days() << "mop" << endl;
                     break;
                 }
             }
@@ -137,7 +139,7 @@ void check_in()
                     room[n].state = 2;
                     customer[i]->set_room_number(room[n].number);
                     cout << "Days: " << customer[i]->get_days() << endl;
-                    cout << "Price: " << room[n].price * customer[i]->get_days() << "mop" << endl;
+                    cout << "Prepaid: " << room[n].price * customer[i]->get_days() << "mop" << endl;
                     break;
                 }
             }
@@ -153,7 +155,7 @@ void check_in()
                     room[n].state = 2;
                     customer[i]->set_room_number(room[n].number);
                     cout << "Days: " << customer[i]->get_days() << endl;
-                    cout << "Price: " << room[n].price * customer[i]->get_days() << "mop" << endl;
+                    cout << "Prepaid: " << room[n].price * customer[i]->get_days() << "mop" << endl;
 
                     break;
                 }
@@ -170,7 +172,7 @@ void check_in()
                     room[n].state = 2;
                     customer[i]->set_room_number(room[n].number);
                     cout << "Days: " << customer[i]->get_days() << endl;
-                    cout << "Price: " << room[n].price * customer[i]->get_days() << "mop" << endl;
+                    cout << "Prepaid: " << room[n].price * customer[i]->get_days() << "mop" << endl;
 
                     break;
                 }

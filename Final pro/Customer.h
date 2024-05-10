@@ -3,7 +3,7 @@
  * @Date: 27-04-2024 20:26:21
  * @LastEditors: Jason
  * @Contact LastEditors: yuchenshi327@outlook.com
- * @LastEditTime: 04-05-2024 19:09:51
+ * @LastEditTime: 08-05-2024 23:55:50
  */
 
 #ifndef CUSTOMER_H
@@ -22,17 +22,16 @@ private:
 	int room_number;
 	int days;
 	int prepaid;
-
 	// 声明公有成员函数
 public:
-	Customer();	 // 声明构造函数
+		Customer();	 // 声明构造函数
 	~Customer(); // 声明析构函数
 
 	void set_name(const char *_name);
 	void set_ID(const char *_ID);
 	void set_days(int _days);
 	void set_room_number(int n);
-	void set_prepaid(int n);
+	void set_prepaid(int p);
 
 	char *get_name();
 	char *get_ID();
