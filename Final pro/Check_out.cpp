@@ -61,6 +61,7 @@ void check_out()
                 price = 2500 * actual_days;
                 break;
             }
+
             // 输出顾客信息
             cout << "Name: " << customer[j]->get_name() << endl;
             cout << "ID: " << customer[j]->get_ID() << endl;

@@ -35,7 +35,7 @@ int main()
    void welcome();
    {
        string username = "admin";		 // 设定用户名
-       string password = "admin123456"; // 设定密码
+       string password = "admin12345"; // 设定密码
        string input_username, input_password;
        cout << "Please enter your username: " << endl;
        cin >> input_username;
