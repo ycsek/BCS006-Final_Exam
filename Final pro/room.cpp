@@ -7,5 +7,5 @@
  */
 
 #include <iostream>
-#include "room.h"
+#include "Room.h"
 using namespace std;

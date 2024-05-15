@@ -3,7 +3,7 @@
  * @Date: 27-04-2024 20:24:22
  * @LastEditors: Jason
  * @Contact LastEditors: yuchenshi327@outlook.com
- * @LastEditTime: 04-05-2024 18:57:30
+ * @LastEditTime: 15-05-2024 12:48:14
  */
 
 #include <iostream>
@@ -16,6 +16,7 @@ using namespace std;
 
 void check_out()
 {
+
     char name2[10], id2[17];
     int room_number;
     int days;
@@ -71,7 +72,7 @@ void check_out()
             cout << "Actual Days: " << actual_days << endl;
             cout << "Actual payment: " << price << "mop" << endl;
 
-            //实现退房结算，若预付金额大于实际房间总价，则输出找零金额（多退少补）
+            // 实现退房结算，若预付金额大于实际房间总价，则输出找零金额（多退少补）
             cout << "You need to pay:" << price - customer[j]->get_prepaid() << "mop" << endl;
 
             // 确认退房环节
@@ -86,6 +87,7 @@ void check_out()
                     if (room[k].number == customer[j]->get_room_number())
                         room[k].state = 0;
                 }
+                // 从顾客的指针数组（Customer *customer）中删除该顾客信息
                 i--;
                 for (; j < i; j++)
                 {
@@ -94,11 +96,5 @@ void check_out()
                 delete customer[i];
             }
         }
-        else
-        {
-            cout << "No information found" << endl;
-        }
-        cout << endl;
-       
     }
 }

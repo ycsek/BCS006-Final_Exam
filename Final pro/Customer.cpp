@@ -3,7 +3,7 @@
  * @Date: 27-04-2024 20:26:39
  * @LastEditors: Jason
  * @Contact LastEditors: yuchenshi327@outlook.com
- * @LastEditTime: 09-05-2024 00:02:59
+ * @LastEditTime: 15-05-2024 14:55:53
  */
 
 #include "Customer.h"
@@ -68,7 +68,7 @@ void Customer::set_room_number(int n)
 	room_number = n;
 }
 
-// 预付款，计算预付款等于预定的天数乘以不同房间等级所对应的房间价格
+// 预付款
 void Customer::set_prepaid(int p)
 {
 
@@ -99,7 +99,7 @@ int Customer::get_days()
 	return days;
 }
 
-// 获取预付款,由set_prepaid函数计算得到
+// 获取预付款
 int Customer::get_prepaid()
 {
 	return prepaid;

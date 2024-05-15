@@ -3,7 +3,7 @@
  * @Date: 27-04-2024 20:24:09
  * @LastEditors: Jason
  * @Contact LastEditors: yuchenshi327@outlook.com
- * @LastEditTime: 11-05-2024 13:45:36
+ * @LastEditTime: 15-05-2024 14:58:23
  */
 
 /*
@@ -42,6 +42,7 @@ void check_in()
         // 遍历已有的顾客信息，查找匹配对象
         for (int j = 0; j < i; j++)
         {
+            // 找到匹配对象，输出相关信息
             if ((strcmp(customer[j]->get_name(), name2) == 0) && (strcmp(customer[j]->get_ID(), id2) == 0))
             {
                 room_number = customer[j]->get_room_number();
@@ -104,9 +105,10 @@ void check_in()
         customer[i] = new Customer;
         int rank_room;
 
-        // 选择客房等级
+        // 选择客房等级，後續内容與預定房間部分大致相同
         cout << "Please choose your room rank:\n";
         cout << "1\n2\n3\n4\n";
+        cout << endl;
         cin >> rank_room;
 
         switch (rank_room)

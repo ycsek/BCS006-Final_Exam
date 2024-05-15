@@ -6,10 +6,9 @@
  * @LastEditTime: 30-04-2024 16:17:05
  */
 
-
 /*
-*进入登录界面后选择功能（预定，入住，退房，查询,退出界面）
-*/
+ *进入登录界面后选择功能（预定，入住，退房，查询,退出界面）
+ */
 
 #include <iostream>
 #include "Enter.h"
@@ -34,15 +33,25 @@ void enter()
 
             switch (kind_of_service)
             {
-            case 1: book_room();
+                // 预定
+            case 1:
+                book_room();
                 break;
-            case 2: check_in();
+                // 入住
+            case 2:
+                check_in();
                 break;
-            case 3: check_out();
+                // 退房
+            case 3:
+                check_out();
                 break;
-            case 4: inquire();
+                // 查询
+            case 4:
+                inquire();
                 break;
-            case 5: exit(0);
+                // 退出
+            case 5:
+                exit(0);
                 break;
             }
         }
@@ -52,4 +61,4 @@ void enter()
             continue;
         }
     }
-}   
+}

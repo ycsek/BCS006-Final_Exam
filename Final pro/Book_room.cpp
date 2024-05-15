@@ -49,13 +49,13 @@ void book_room()
 				customer[i]->set_room_number(room[n].number);
 				cout << "Days: " << customer[i]->get_days() << endl;
 				cout << "Prepaid : " << room[n].price * customer[i]->get_days() << "mop" << endl;
-				customer[i]->set_prepaid(room[n].price * customer[i]->get_days()); 
+				customer[i]->set_prepaid(room[n].price * customer[i]->get_days());
 				break;
 			}
 		}
 		break;
-		// 双人房
 
+		// 双人房
 	case 2:
 		for (n = 30; n < 60; n++)
 		{

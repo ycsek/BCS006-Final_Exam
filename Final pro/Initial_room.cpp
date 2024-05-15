@@ -6,9 +6,7 @@
  * @LastEditTime: 30-04-2024 16:17:55
  */
 
-/*
- * 初始化100个不同等级的房间
- */
+// 初始化100個房間
 
 #include <iostream>
 #include "Initial_room.h"
@@ -22,6 +20,7 @@ void initial_room()
     int j, k = 501;
     for (j = 0; j < 30; j++)
     {
+        // 初始化房間號碼，等級，狀態，價格
         room[j].number = k++;
         room[j].rank = 1;
         room[j].state = 0;
