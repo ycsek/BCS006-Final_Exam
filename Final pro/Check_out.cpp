@@ -76,7 +76,7 @@ void check_out()
             cout << "You need to pay:" << price - customer[j]->get_prepaid() << "mop" << endl;
 
             // 确认退房环节
-            cout << "Confirm checkour enter 1 " << endl;
+            cout << "Confirm checkout enter 1 " << endl;
             char account;
             cin >> account;
             if (account == '1')
