@@ -5,7 +5,7 @@
 
 如果你看到了这个作业，我希望你可以为我提出一些改进建议，谢谢!
 
-邮箱：ycshi.cs@gmail.com
+邮箱：yuchenshi327@outlook.com
 
 
 
@@ -14,6 +14,6 @@ This is the final project of the Bachelor of Computer Science in Advanced Progra
 
 If you see this assignment, I hope you can suggest some improvements for me, thanks!
 
-E-mail: ycshi.cs@gmail.com
+E-mail: yuchenshi327@outlook.com
 
 
